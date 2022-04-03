@@ -5,13 +5,13 @@ public class FCFS {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.print("Enter number of process: ");
-    int n = s.nextInt();
+    int n = s.nextInt(); 
     int[] burstTime = new int[n];
     int[] waitTime = new int[n];
     int[] turnAroundTime = new int[n];
     System.out.println("Enter burst time for each processes:");
     for (int i = 0; i < n; i++) {
-      System.out.printf("job %d = ", i + 1);
+      System.out.printf("job %d = ", i + 1); // save each burst time in array
       burstTime[i] = s.nextInt();
     }
     waitingTime(n, burstTime, waitTime);
