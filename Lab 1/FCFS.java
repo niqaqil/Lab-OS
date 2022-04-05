@@ -11,15 +11,16 @@ public class FCFS {
     int[] turnAroundTime = new int[n];
     System.out.println("Enter burst time for each processes:");
     for (int i = 0; i < n; i++) {
-      System.out.printf("job %d = ", i + 1); // save each burst time in array
+      System.out.printf("Job %d = ", i + 1); // save each burst time in array
       burstTime[i] = s.nextInt();
     }
     waitingTime(n, burstTime, waitTime);
     turnAroundTime(n, burstTime, waitTime, turnAroundTime);
     System.out.println("Waiting time and Turnaround time for each job:");
-    System.out.println("Job: \tWaiting time, \tTurnaround time");
+    System.out.println("Job \tWaiting time \tTurnaround time");
+    //printing out the table
     for (int i = 0; i < n; i++) {
-      System.out.printf("job %d: \t%d, \t%d\n", i + 1, waitTime[i], turnAroundTime[i]);
+      System.out.printf("%d: \t%d, \t\t%d\n", i + 1, waitTime[i], turnAroundTime[i]); 
     }
   }
 
