@@ -22,6 +22,16 @@ public class FCFS {
     for (int i = 0; i < n; i++) {
       System.out.printf("%d: \t%d, \t\t%d\n", i + 1, waitTime[i], turnAroundTime[i]); 
     }
+
+    // calculate average waiting and turnaround time
+    float totalWait = 0;
+    float totalTurnAround = 0;
+    for (int i = 0; i < n; i++) {
+      totalWait += waitTime[i];
+      totalTurnAround += turnAroundTime[i];
+    }
+    System.out.printf("\nAverage waiting time: %.2f", totalWait / n);
+    System.out.printf("\nAverage Turnaround time: %.2f", totalTurnAround / n);
   }
 
   static void waitingTime(int n, int burst[], int wait[]) {
