@@ -6,13 +6,17 @@ public class Paging {
 
     int  n, pageSize, frame, pagesNo, offset;
     int[] page = new int[50];
+    // input no of pages
     System.out.print("Enter no of pages in memory: ");
     n = scan.nextInt();
+    // input page size
     System.out.print("Enter page size: ");
     pageSize = scan.nextInt();
+    // input no frame
     System.out.print("Enter no of frame: ");
     frame = scan.nextInt();
     
+    // input page table's frame no
     System.out.println("\nEnter the page table:");
     System.out.println("Enter frame no -1 if the page is not presented in any frame\n");
     System.out.println("Page No. \t Frame No. \n----------\t----------");
@@ -24,6 +28,7 @@ public class Paging {
 
     int x = 0;
     do {
+      // ask user to enter any logical address
       System.out.println("\nEnter logical address(i.e,page no & offset): ");
       System.out.print("Page no: ");
       pagesNo = scan.nextInt();
