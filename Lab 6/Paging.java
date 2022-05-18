@@ -36,9 +36,9 @@ public class Paging {
       else{
         int phyAddress = (page[pagesNo] * pageSize) + offset;
         System.out.printf("Physical address is: %d", phyAddress);
-        System.out.printf("\nFrame no and offset is: %d %d", page[pagesNo], offset);
+        System.out.printf("\nFrame no and offset is: %d %d\n", page[pagesNo], offset);
       }
-      System.out.print("Do you want to continue? (0/1): ");
+      System.out.print("\nDo you want to continue? (0/1): ");
       x = scan.nextInt(2);
     } while(x==1);
   }
